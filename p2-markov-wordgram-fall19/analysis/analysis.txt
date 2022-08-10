@@ -1,0 +1,47 @@
+
+Pippa Lother pel11
+
+Run WordGramBenchmark for wordgrams of size 2-10 and record
+the number of WordGram values/objects that occur more than
+once as reported by the runs. For example, with WSIZE = 2,
+which generates 2-grams, the output of benchmark and benchmarkShift
+each indicates that the total # wordgrams generated is 177,634
+and that the # unique wordgrams is 117,181
+
+This means there are 177,634 - 117,181 = 60,453 WordGram values that
+occur more than once. Find these same numbers/values for other orders
+of k and complete the table below for different k-grams/different
+values of WSIZE
+
+WSIZE    # duplicates
+2        60,453
+3        10,756
+4        1996
+5        676
+6        370
+7        234
+8        159
+9        113
+10       81
+
+=====
+Explain in your own words the conceptual differences between
+the benchmark and benchmarkShift methods.
+Answer these questions:
+
+(1) Why the results of these methods should be the same in
+terms of changes made to the HashSet parameter passed to each method.
+Because they both use the HashSet to load wordgrams into.
+
+(2) What are the conceptual differences between the two
+benchmarking methods
+benchmarkShift changes the memory as the program runs whereas
+benchmark just keeps adding and stores more memory.
+
+(3) Is the total amount of memory allocated for arrays
+the same or different in the two methods? Account for
+arrays created in the methods and arrays created by
+WordGram objects. Try to be quantitative in answering.
+benchmark creates memory upfront, is less efficient, and stores more memory
+than benchmarkShift which varies depending on size. So memory allocation is
+different for the two methods.
